@@ -1,7 +1,10 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+var express = require('express');
+var app = express();
 
-app.get('/status', (req, res) => res.send({status: "I'm alive!"}));
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(3007, function () {
+  console.log('Example app listening on port 3007!');
+});
